@@ -6,12 +6,10 @@ describe('findWords', () => {
     const testLetters = 'oogd';
     const dictionary = ['good', 'god', 'dog', 'goo', 'do', 'go'];
     const result = dictionary.sort();
-    console.log(result);
     expect(findWords(testLetters, dictionary)).toStrictEqual(result);
   });
 
   test('returns correctly when the default case has some useless words', () => {
-    console.log();
     const testLetters = 'oogd';
     const dictionary = [
       'cherry',
@@ -29,7 +27,6 @@ describe('findWords', () => {
   });
 
   test('returns correctly with one-letter word edge case', () => {
-    console.log();
     const testLetters = 'oogda';
     const dictionary = [
       'cherry',
@@ -49,7 +46,6 @@ describe('findWords', () => {
   });
 
   test('returns correctly when there are no matches', () => {
-    console.log();
     const testLetters = 'oogda';
     const dictionary = ['cherry', 'banana', 'apple'];
     const result: string[] = [];
