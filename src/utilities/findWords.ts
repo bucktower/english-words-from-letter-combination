@@ -32,8 +32,10 @@ function exploreWord(
   for (let i = 0; i < remainingLetters.length; i++) {
     const letterToTry = remainingLetters[i];
     const newFragment = fragment + letterToTry;
+    // Check if this word exists
     if (WORDS.includes(newFragment)) validEnglishWords.add(newFragment);
 
+    // Continue exploring with the remaining letters
     const newRemainingLetters = remainingLetters.toSpliced(i, 1);
     exploreWord(newFragment, newRemainingLetters, WORDS, validEnglishWords);
   }
